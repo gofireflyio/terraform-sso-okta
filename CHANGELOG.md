@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://github.com/gofireflyio/terraform-sso-okta/compare/v1.0.0...v1.1.0) (2025-03-11)
+
+
+### Features
+
+* 1.1.0 ([9328133](https://github.com/gofireflyio/terraform-sso-okta/commit/93281339550d54db01b5dc9c4804143b5575d5ee))
+
 ## 1.0.0 (2025-03-04)
 
 
