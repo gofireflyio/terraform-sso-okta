@@ -7,7 +7,7 @@ This Terraform module automates the configuration of Okta as an Identity Provide
 
 - Configures Okta as an Identity Provider for authentication.
 - Assigns users directly to the Okta SAML application.
-- Can create dedicated viewers and admins groups, and assign them to the application
+- Create dedicated viewers and admins groups, and assign them to the application.
 - Manages Okta application and user/group assignments for enhanced access control.
 
 ## Prerequisites
