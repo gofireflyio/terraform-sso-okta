@@ -1,5 +1,5 @@
 resource "okta_app_saml" "current" {
-  label                     = "Firefly"
+  label                     = var.app_name
   sso_url                   = "${local.sso_url}-${var.domain}"
   logo                      = "${path.module}/utility/logo.png"
   recipient                 = "${local.sso_url}-${var.domain}"
@@ -26,11 +26,14 @@ resource "okta_app_saml" "current" {
     name   = "name"
     values = ["user.firstName"]
   }
-  attribute_statements {
-    type         = "GROUP"
-    name         = "groups"
-    filter_type  = "CONTAINS"
-    filter_value = "Firefly"
+  dynamic "attribute_statements" {
+    for_each = length(var.firefly_users_emails) == 0 ? [1] : []
+    content {
+      type         = "GROUP"
+      name         = "groups"
+      filter_type  = "CONTAINS"
+      filter_value = "Firefly"
+    }
   }
 }
 
